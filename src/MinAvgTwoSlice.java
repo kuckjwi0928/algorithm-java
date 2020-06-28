@@ -4,7 +4,7 @@ public class MinAvgTwoSlice {
   }
 
   private static int solution(int[] A) {
-    double min = 100000d;
+    double min = (A[0] + A[1]) / 2d;
     int idx = 0;
     for (int i = 2; i < A.length; i++) {
       double avg = (A[i - 2] + A[i - 1] + A[i]) / 3d;
