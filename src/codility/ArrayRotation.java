@@ -1,3 +1,5 @@
+package codility;
+
 public class ArrayRotation {
   public static void main(String[] args) {
     ArrayRotation.solution(new int[]{3,8,9,7,6}, 3);

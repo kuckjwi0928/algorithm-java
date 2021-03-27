@@ -1,3 +1,5 @@
+package codility;
+
 public class MaxCounters {
   public static void main(String[] args) {
     MaxCounters.solution(5, new int[]{3,4,4,6,1,4,4});

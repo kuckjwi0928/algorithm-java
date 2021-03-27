@@ -1,3 +1,5 @@
+package codility;
+
 public class CountDiv {
   public static void main(String[] args) {
     System.out.println(CountDiv.solution(6, 11, 2));

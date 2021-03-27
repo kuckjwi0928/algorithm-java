@@ -1,3 +1,5 @@
+package codility;
+
 public class MagicSquare {
   public static void main(String[] args) {
     int[][] s = new int[][] {

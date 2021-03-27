@@ -1,3 +1,5 @@
+package codility;
+
 public class OddOccurrencesInArray {
   public static void main(String[] args) {
     System.out.println(OddOccurrencesInArray.solution(new int[]{9, 3, 9, 3, 9, 7, 9}));

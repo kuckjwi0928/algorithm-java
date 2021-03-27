@@ -1,3 +1,5 @@
+package codility;
+
 public class GenomicRangeQuery {
   // A = 1, C = 2, G = 3, T = 4
   public static void main(String[] args) {
