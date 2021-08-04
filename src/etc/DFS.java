@@ -1,8 +1,9 @@
 package etc;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Stack;
 
 public class DFS {
   private final static int LIMIT = 5;
@@ -30,6 +31,12 @@ public class DFS {
     adj[1].add(4);
 
     new DFS().dfs(0);
+
+    for(int i = 0; i < LIMIT; i++) {
+      visited[i] = false;
+    }
+
+    new DFS().dfsWithStack(0);
   }
 
   public void dfs(int v) {
@@ -38,6 +45,22 @@ public class DFS {
     for (int adj : adj[v]) {
       if (!visited[adj]) {
         dfs(adj);
+      }
+    }
+  }
+
+  public void dfsWithStack(int v) {
+    Stack<Integer> stack = new Stack<>();
+    stack.push(v);
+
+    while (!stack.isEmpty()) {
+      int _v = stack.pop();
+      System.out.println(vertex[_v]);
+      visited[_v] = true;
+      for (int adj : adj[_v]) {
+        if (!visited[adj]) {
+          stack.push(adj);
+        }
       }
     }
   }

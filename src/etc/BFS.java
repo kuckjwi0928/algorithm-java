@@ -3,7 +3,6 @@ package etc;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
-import java.util.stream.Collectors;
 
 public class BFS {
   private final static int LIMIT = 5;
@@ -35,16 +34,14 @@ public class BFS {
 
   public void bfs(int v) {
     Queue<Integer> queue = new LinkedList<>();
-
-    visited[v] = true;
     queue.offer(v);
 
     while (!queue.isEmpty()) {
       int _v = queue.poll();
+      visited[_v] = true;
       System.out.println(vertex[_v]);
       for (int adj : adj[_v]) {
         if (!visited[adj]) {
-          visited[adj] = true;
           queue.add(adj);
         }
       }
