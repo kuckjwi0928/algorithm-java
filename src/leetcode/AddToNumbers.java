@@ -10,9 +10,13 @@ public class AddToNumbers {
   }
 
   public static void main(String[] args) {
-    ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(9)));
-    ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4, new ListNode(9))));
+    // l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+    ListNode l1 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9)))))));
+    ListNode l2 = new ListNode(9, new ListNode(9, new ListNode(9, new ListNode(9))));
     new AddToNumbers().addTwoNumbers(l1, l2);
+    ListNode l3 = new ListNode(2, new ListNode(4, new ListNode(3)));
+    ListNode l4 = new ListNode(5, new ListNode(6, new ListNode(4)));
+    new AddToNumbers().addTwoNumbers(l3, l4);
   }
 
   public String debug(ListNode l) {
@@ -26,55 +30,35 @@ public class AddToNumbers {
   }
 
   public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-    ListNode node1 = l1;
-    ListNode node2 = l2;
+    ListNode head = new ListNode();
+    ListNode curr = head;
 
-    ListNode first = null;
-    ListNode last = null;
+    int carry = 0;
 
-    int round = 0;
+    while (l1 != null || l2 != null) {
+      int val1 = l1 != null ? l1.val : 0;
+      int val2 = l2 != null ? l2.val : 0;
 
-    while (node1 != null || node2 != null) {
-      int val1 = node1 == null ? 0 : node1.val;
-      int val2 = node2 == null ? 0 : node2.val;
+      int sum = val1 + val2 + carry;
 
-      int sum = val1 + val2 + round;
+      carry = sum / 10;
 
-      if (sum / 10 > 0) {
-        sum = sum % 10;
-        round = 1;
-      } else {
-        round = 0;
+      curr.next = new ListNode(sum % 10);
+      curr = curr.next;
+
+      if (l1 != null) {
+        l1 = l1.next;
       }
 
-      ListNode l = last;
-      ListNode newNode = new ListNode(sum);
-      last = newNode;
-
-      if (l == null) {
-        first = newNode;
-      } else {
-        l.next = newNode;
-      }
-
-      if (node1 != null) {
-        node1 = node1.next;
-      }
-
-      if (node2 != null) {
-        node2 = node2.next;
+      if (l2 != null) {
+        l2 = l2.next;
       }
     }
 
-    if (round == 1) {
-      ListNode l = last;
-      ListNode newNode = new ListNode(round);
-      l.next = newNode;
-      last = newNode;
+    if (carry > 0) {
+      curr.next = new ListNode(carry);
     }
 
-    System.out.println(debug(first));
-
-    return first;
+    return head.next;
   }
 }
