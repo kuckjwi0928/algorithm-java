@@ -1,48 +1,29 @@
 package leetcode;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class LengthOfLongestSubstring {
   public static void main(String[] args) {
-    new LengthOfLongestSubstring().lengthOfLongestSubstring("pwwkew");
+    System.out.println(new LengthOfLongestSubstring().lengthOfLongestSubstring("pwwkew"));
   }
 
   public int lengthOfLongestSubstring(String s) {
-    if (s.isEmpty() || s.length() == 1) {
-      return s.length();
-    }
+    Map<Character, Integer> map = new HashMap<>();
 
     char[] chars = s.toCharArray();
 
-    int len = chars.length;
-    int p1 = 0;
-    int p2 = 1;
+    int num = 0;
+    int max = 0;
 
-    Set<Character> set = new LinkedHashSet<>();
-
-    int max = Integer.MIN_VALUE;
-
-    while (p1 != p2) {
-      max = Math.max(max, set.size());
-
-      set.add(chars[p1]);
-
-      if (p2 > len - 1) {
-        break;
+    for (int i = 0; i < chars.length; i++){
+      if (map.containsKey(chars[i])) {
+        num = Math.max(num, map.get(chars[i]) + 1);
       }
-
-      if (!set.contains(chars[p2])) {
-        set.add(chars[p2]);
-        p2++;
-        continue;
-      }
-
-      p1++;
-      p2 = p1 + 1;
-
-      set.clear();
+      map.put(chars[i], i);
+      max = Math.max(max, i - num + 1);
     }
 
-    return Math.max(max, set.size());
+    return max;
   }
 }
