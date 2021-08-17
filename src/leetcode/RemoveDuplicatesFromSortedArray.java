@@ -1,14 +1,12 @@
 package leetcode;
 
-import java.util.Arrays;
-
 public class RemoveDuplicatesFromSortedArray {
   public static void main(String[] args) {
-//    new RemoveDuplicatesFromSortedArray().removeDuplicates(new int[]{1,1,2});
-//    new RemoveDuplicatesFromSortedArray().removeDuplicates(new int[]{0,0,1,1,1,2,2,3,3,4});
-//    new RemoveDuplicatesFromSortedArray().removeDuplicates(new int[]{1});
+    new RemoveDuplicatesFromSortedArray().removeDuplicates(new int[]{1,1,2});
+    new RemoveDuplicatesFromSortedArray().removeDuplicates(new int[]{0,0,1,1,1,2,2,3,3,4});
+    new RemoveDuplicatesFromSortedArray().removeDuplicates(new int[]{1});
     new RemoveDuplicatesFromSortedArray().removeDuplicates(new int[]{1,1});
-//    new RemoveDuplicatesFromSortedArray().removeDuplicates(new int[]{1,2});
+    new RemoveDuplicatesFromSortedArray().removeDuplicates(new int[]{1,2});
   }
 
   public int removeDuplicates(int[] nums) {
