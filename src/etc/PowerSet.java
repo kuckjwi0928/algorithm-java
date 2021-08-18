@@ -1,13 +1,12 @@
 package etc;
 
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Arrays;
 
 public class PowerSet {
   public static void main(String[] args) {
     boolean[] visited = new boolean[6];
 
-    new PowerSet().powerSet(new int[]{1,0,-1,0,-2,2}, 0, visited);
+    new PowerSet().powerSet(new int[]{1,2,3}, 0, visited);
     new PowerSet().powerSetForBit(new int[]{1,2,3});
   }
 
