@@ -12,8 +12,9 @@ public class NextPermutation {
     if (nums.length < 2) {
       return;
     }
-    int i = nums.length - 2; // 1
-    int j = nums.length - 1; // 2
+
+    int i = nums.length - 2;
+    int j = nums.length - 1;
 
     while (i >= 0 && nums[i] >= nums[i + 1]) {
       i--;
