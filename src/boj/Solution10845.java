@@ -36,7 +36,7 @@ public class Solution10845 {
               break;
         }
       }
-      System.out.println(builder.toString());
+      System.out.println(builder);
     } catch (IOException e) {
       e.printStackTrace();
     }
