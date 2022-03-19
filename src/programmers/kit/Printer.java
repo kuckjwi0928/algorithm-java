@@ -1,4 +1,4 @@
-package programmers;
+package programmers.kit;
 
 import java.util.LinkedList;
 import java.util.stream.Collectors;

@@ -1,4 +1,4 @@
-package programmers;
+package programmers.kit;
 
 public class Joystick {
   public static void main(String[] args) {
