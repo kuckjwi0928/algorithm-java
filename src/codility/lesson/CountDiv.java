@@ -1,4 +1,4 @@
-package codility;
+package codility.lesson;
 
 public class CountDiv {
   public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package codility;
+package codility.lesson;
 
 public class GenomicRangeQuery {
   // A = 1, C = 2, G = 3, T = 4

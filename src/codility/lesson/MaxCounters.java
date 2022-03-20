@@ -1,4 +1,4 @@
-package codility;
+package codility.lesson;
 
 public class MaxCounters {
   public static void main(String[] args) {

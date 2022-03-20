@@ -1,4 +1,4 @@
-package codility;
+package codility.lesson;
 
 public class MagicSquare {
   public static void main(String[] args) {

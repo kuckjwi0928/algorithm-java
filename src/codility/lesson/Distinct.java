@@ -1,4 +1,4 @@
-package codility;
+package codility.lesson;
 
 import java.util.Arrays;
 import java.util.stream.Collectors;
