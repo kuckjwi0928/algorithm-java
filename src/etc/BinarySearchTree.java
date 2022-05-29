@@ -3,15 +3,15 @@ package etc;
 import java.util.*;
 
 public class BinarySearchTree<T> {
-  private final Comparator<T> comparator;
+  private final Comparator<? super T> comparator;
   private Node<T> root;
 
   @SuppressWarnings("unchecked")
   public BinarySearchTree() {
-    this.comparator = (e1, e2) -> ((Comparable<T>) e1).compareTo(e2);
+    this.comparator = (e1, e2) -> ((Comparable<? super T>) e1).compareTo(e2);
   }
 
-  public BinarySearchTree(Comparator<T> comparator) {
+  public BinarySearchTree(Comparator<? super T> comparator) {
     this.comparator = comparator;
   }
 
