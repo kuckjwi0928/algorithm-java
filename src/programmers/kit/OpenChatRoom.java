@@ -1,4 +1,4 @@
-package programmers.kakao;
+package programmers.kit;
 
 import java.util.*;
 import java.util.stream.Collectors;

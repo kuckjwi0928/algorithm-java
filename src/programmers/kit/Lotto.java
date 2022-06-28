@@ -1,4 +1,4 @@
-package programmers.devmatching;
+package programmers.kit;
 
 import java.util.Arrays;
 import java.util.Map;

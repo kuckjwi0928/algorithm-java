@@ -1,4 +1,4 @@
-package programmers.kakao;
+package programmers.kit;
 
 public class StringCompression {
   public static void main(String[] args) {

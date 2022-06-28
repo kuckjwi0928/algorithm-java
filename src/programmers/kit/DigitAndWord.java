@@ -1,4 +1,4 @@
-package programmers.kakao;
+package programmers.kit;
 
 import java.util.Map;
 
