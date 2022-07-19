@@ -1,21 +1,26 @@
-package book;
+package programmers.kit;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class FindingMaze {
+public class GameMap {
   public static void main(String[] args) {
-    System.out.println(new FindingMaze().solution(new int[][]{{1,0,1,0,1,0},{1,1,1,1,1,1},{0,0,0,0,0,1},{1,1,1,1,1,1},{1,1,1,1,1,1}}));
+    System.out.println(new GameMap().solution(new int[][]{{1,0,1,1,1},{1,0,1,0,1},{1,0,1,1,1},{1,1,1,0,1},{0,0,0,0,1}}));
+    System.out.println(new GameMap().solution(new int[][]{{1,0,1,1,1},{1,0,1,0,1},{1,0,1,1,1},{1,1,1,0,0},{0,0,0,0,1}}));
   }
 
-  public int solution(int[][] nums) {
-    int n = nums.length;
-    int m = nums[0].length;
+  public int solution(int[][] maps) {
+    int n = maps.length;
+    int m = maps[0].length;
 
-    bfs(nums, 0, 0);
+    bfs(maps, 0, 0);
 
-    return nums[n - 1][m - 1];
+    if (maps[n - 1][m - 1] <= 1) {
+      return -1;
+    }
+
+    return maps[n - 1][m - 1];
   }
 
   private void bfs(int[][] nums, int startX, int startY) {
