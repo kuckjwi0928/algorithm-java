@@ -3,11 +3,11 @@ package programmers.exercise;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class lessons160586 {
+public class Lessons160586 {
   public static void main(String[] args) {
-    System.out.println(Arrays.toString(new lessons160586().solution(new String[]{"ABACD", "BCEFD"}, new String[]{"ABCD","AABB"})));
-    System.out.println(Arrays.toString(new lessons160586().solution(new String[]{"AA"}, new String[]{"B"})));
-    System.out.println(Arrays.toString(new lessons160586().solution(new String[]{"AGZ", "BSSS"}, new String[]{"ASA", "BGZ"})));
+    System.out.println(Arrays.toString(new Lessons160586().solution(new String[]{"ABACD", "BCEFD"}, new String[]{"ABCD","AABB"})));
+    System.out.println(Arrays.toString(new Lessons160586().solution(new String[]{"AA"}, new String[]{"B"})));
+    System.out.println(Arrays.toString(new Lessons160586().solution(new String[]{"AGZ", "BSSS"}, new String[]{"ASA", "BGZ"})));
   }
 
   public int[] solution(String[] keymap, String[] targets) {
