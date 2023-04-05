@@ -8,7 +8,7 @@ public class Lessons140107 {
   public long solution(int k, int d) {
     long answer = 0;
     for (var i = 0; i <= d; i += k) {
-      answer += Math.sqrt(Math.pow(d, 2) - Math.pow(i, 2)) / k + 1;
+      answer += (int) (Math.sqrt((long) Math.pow(d, 2) - (long) Math.pow(i, 2)) / k + 1);
     }
     return answer;
   }
