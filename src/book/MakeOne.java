@@ -21,7 +21,6 @@ public class MakeOne {
         dp[i] = Math.min(dp[i], dp[i / 5] + 1);
       }
     }
-    System.out.println(Arrays.toString(dp));
     return dp[n];
   }
 }
